@@ -1,0 +1,63 @@
+.title{
+  font-size: xx-large;
+  font-family: "arial black";
+  padding-bottom: 15px;
+}
+
+
+.headline-box{
+  border: 1px solid black;
+  margin: 5px;
+  padding: 0px 10px 10px 10px;
+}
+
+.headline h1{
+  font-size: 24px;
+}
+
+/*
+  
+  Radio Buttons
+  
+  */
+  
+  
+.radio_answer_text{
+  margin-left:  5px;
+}
+
+tr.spaceUnder > td {
+  padding-bottom: .5em;
+} 
+
+.answer{
+  width: 300px;
+} 
+
+.report{
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #FFFFE5;
+}
+
+.reaction-textarea{
+  height: 100px;
+  width: 400px;
+}
+textarea:disabled {
+  background: #ddd;
+}
+
+.start-button-container{
+  width: 365px;
+}
+
+.timer{
+  font-size: medium;
+  font-weight: bold;
+}
+
+.part-title{
+  font-size:large;
+  font-weight: bold;
+}

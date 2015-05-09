@@ -1,0 +1,198 @@
+
+
+<template name="analysis">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <div class='title' align="center">Analyze Jokes</div>      
+        <b>Instructions Part 1</b>: Read the headline (left) and the joke (right). First, we want to see how the elements in the joke correspond to things in the headline. Copy and paste phrases in the joke with corresponding phrases in the headline. Sometimes the match will be exact, sometimes it will be more oblique or referential. See the examples for details. 
+       Example 1<br>
+       Example 2<br>
+       Example 3 <br>
+       <br>
+      </div>
+      <div class='col-md-2'></div>
+    </div>
+    
+    <div class='row'>
+      <div class='col-md-1'></div>    
+      <div class='col-md-5'>       
+        <div class="headline">{{{analysisTask.headline_text}}}</div>
+        <div class="description">{{{analysisTask.description_text}}}</div>        
+      </div>
+      <div class='col-md-4'>       
+        <div class="voiceImage">{{{analysisTask.voice_image}}}</div>
+        <div class="voiceText">{{{analysisTask.voice_text}}}</div>        
+      </div>
+      <div class='col-md-2'></div>
+    </div>
+ 
+     <div class='row'>
+      <div class='col-md-2'> </div>
+      <div class='col-md-4'> 
+        Headline text  <br>    
+        <input type="text" class="answer" id="headline-1"/>
+        <input type="text" class="answer" id="headline-2"/>
+        <input type="text" class="answer" id="headline-3"/>
+        <input type="text" class="answer" id="headline-4"/>
+        <input type="text" class="answer" id="headline-5"/>   
+      </div>
+      <div class='col-md-4'> 
+        Matching joke text<br>      
+        <input type="text" class="answer" id="joke-1"/><br>
+        <input type="text" class="answer" id="joke-2"/><br>
+        <input type="text" class="answer" id="joke-3"/><br>
+        <input type="text" class="answer" id="joke-4"/><br>
+        <input type="text" class="answer" id="joke-5"/><br>
+      </div>
+      <div class='col-md-2'></div>
+    </div>
+    <br>
+    <br>
+     <div class='row'>
+      <div class='col-md-2'> </div>
+      <div class='col-md-8'>  
+        <b>Instructions Part 2</b>: Now, forget the headline and just think about the joke. We want to know what is going on beneath the surface of the joke. For example, often a joke is criticizing someone. Often, we express criticisms in a round about way, rather than directly. There is no right answer. Everybody interprets jokes differently. Answer as many of the questions as you can. Many times there is no answer. If there are multiple answers, list them all, separated with a comma. 
+        <br>
+        Joke:
+        <div class="voiceText">{{{analysisTask.voice_text}}}</div> 
+        <br> 
+        <br>
+        <table>    
+
+
+          <tr>
+            <td>              
+              Criticism
+            </td>
+            <td>             
+              
+            </td>
+          </tr>
+
+          <tr>
+            <td>              
+              &nbsp;&nbsp;&nbsp;&nbsp;Who is being criticized?
+            </td>
+            <td>             
+              <input type="text" class="answer" id="crit-who"/>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>              
+              &nbsp;&nbsp;&nbsp;&nbsp;What for?
+            </td>
+            <td>             
+              <input type="text" class="answer" id="crit-why"/>
+            </td>
+          </tr>
+          
+          <br>
+          
+          <tr>
+            <td>              
+              Whose point of view is presented?
+            </td>
+            <td>             
+              <input type="text" class="answer" id="pov"/>
+            </td>
+          </tr>
+
+          <br>
+
+          <tr>
+            <td>              
+              Is there any unusually specific language?
+            </td>
+            <td>             
+              <input type="text" class="answer" id="lang"/>
+            </td>
+          </tr>
+
+          <br>
+
+          <tr>
+            <td colspan="2">              
+              Emotionally charged language <i>(separate terms with a comma)</i>
+            </td>
+          </tr>        
+          <tr>
+            <td>              
+              &nbsp;&nbsp;&nbsp;&nbsp;Positive
+            </td>
+            <td>             
+              <input type="text" class="answer" id="emotion-positive"/>
+            </td>
+          </tr>  
+          
+                    <tr>
+            <td>              
+              &nbsp;&nbsp;&nbsp;&nbsp;Negative
+            </td>
+            <td>             
+              <input type="text" class="answer" id="emotion-negative"/>
+            </td>
+          </tr>  
+
+        </table>  
+      </div>
+      <div class='col-md-2'></div>
+    </div>
+    
+        
+    
+    <!--
+    {{#each ratingTask.voices}}
+      <div class='row'>
+        <div class='col-md-2'></div>
+        <div class='col-md-2'>
+          IMAGE
+        </div>
+        <div class='col-md-3'>
+          {{{voice_text}}}<br>
+        </div>
+        <div class='col-md-3'>
+          <table>
+            <tr class="spaceUnder">
+              <td> <input type="radio" name="rating_{{voice_id}}" data-id= "{{voice_id}}" value="yes"></td>
+              <td> <span id ='yes' class=''>Funny</span></td>
+            </tr>
+            
+            <tr class="spaceUnder">
+              <td><input type="radio" name="rating_{{voice_id}}" data-id= "{{voice_id}}" value="kinda" ></td>
+              <td><span id ='kinda' class=''>Kinda funny</span></td>
+            </tr>
+            
+            <tr>
+              <td><input type="radio" name="rating_{{voice_id}}" data-id= "{{voice_id}}" value="no"></td>
+              <td><span id ='no' class=''>Not funny</span></td> 
+            </tr>
+ 
+             <tr>
+              <td><input type="radio" name="rating_{{voice_id}}" data-id= "{{voice_id}}" value="dunno"></td>
+              <td><span id ='dunno' class=''>I don't get it.</span></td> 
+            </tr>            
+          
+          </table>
+        </div>
+        <div class='col-md-2'></div>
+      </div>
+    {{/each}}
+    -->
+    
+    <div class='row'>
+    <div class='col-md-2'></div>
+    <div class='col-md-8'>
+      <button id='submit' class="btn btn-primary">Submit</button>
+    </div>
+    <div class='col-md-2'></div>
+    </div>
+        
+        
+  </div>
+  
+  
+  
+</template>

@@ -1,0 +1,77 @@
+
+
+<template name="rate">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <div class='title' align="center">Rate Jokes ({{num_doing}} of {{ratingBatch.num_total}})</div>      
+        Read the real news headline (which you may or may not find funny.) Read all of the satirical "man-on-the-street" style responses. For each satirical response, tell us how funny you find it: Funny, Kinda Funny, Not Funny, or I don't get it.
+        <br>
+        <br>
+        <b>Real news headline</b>: (just read) 
+        <div class="headline-box">
+          <div class="headline">{{{ratingTask.headline_text}}}</div>
+          <div class="description">{{{ratingTask.description_text}}}</div>
+        </div>
+        <br>
+        <b>Three satirical responses.</b> Rate each one for how funny you think it is.<br>
+        <br>
+      </div>
+      <div class='col-md-2'></div>
+    </div>
+
+    
+    
+    {{#each ratingTask.voices}}
+      <div class='row'>
+        <div class='col-md-2'></div>
+        <div class='col-md-2'>
+          <img src="../../{{voice_image}}"/>
+        </div>
+        <div class='col-md-3'>
+          {{{voice_text}}}<br>
+        </div>
+        <div class='col-md-3'>
+          <table>
+            <tr class="spaceUnder">
+              <td> <input type="radio" name="rating_{{voice_id}}" data-id= "{{voice_id}}" value="yes"></td>
+              <td> <span id ='yes' class='radio_answer_text'>Funny</span></td>
+            </tr>
+            
+            <tr class="spaceUnder">
+              <td><input type="radio" name="rating_{{voice_id}}" data-id= "{{voice_id}}" value="kinda" ></td>
+              <td><span id ='kinda' class='radio_answer_text'>Kinda funny</span></td>
+            </tr>
+            
+            <tr class="spaceUnder">
+              <td><input type="radio" name="rating_{{voice_id}}" data-id= "{{voice_id}}" value="no"></td>
+              <td><span id ='no' class='radio_answer_text'>Not funny</span></td> 
+            </tr>
+ 
+             <tr>
+              <td><input type="radio" name="rating_{{voice_id}}" data-id= "{{voice_id}}" value="dunno"></td>
+              <td><span id ='dunno' class='radio_answer_text'>I don't get it.</span></td> 
+            </tr>            
+          
+          </table>
+        </div>
+        <div class='col-md-2'></div>
+      </div>
+    {{/each}}
+    
+    
+    <div class='row'>
+    <div class='col-md-7'></div>
+    <div class='col-md-3'>
+      <button id='submit' class="btn btn-primary">Submit</button>
+    </div>
+    <div class='col-md-2'></div>
+    </div>
+        
+        
+  </div>
+  
+  
+  
+</template>

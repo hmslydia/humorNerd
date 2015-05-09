@@ -1,0 +1,51 @@
+<head>
+  <title>
+    HumorNerd
+  </title>
+</head>
+
+
+
+<template name="home">
+  <div class='container'>
+    
+    <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <div class='title' align="center">HumorNerd</div>   
+        <img src="OnionFaces.png"/> <br>
+        HumorNerd is an online challenge to collaboratively mimic The Onion's style of humor. Our goals are to understand what is funny about The Onion and to be able to create humor that is as good as theirs.<br>
+        <br>
+        You can help!<br>
+        <br>
+        Help us find the funniest Onion jokes by rating how funny you find their jokes.<br>
+        <br> 
+          
+        {{#each ratingBatches}}
+          <button id="ratingBatch" class="btn btn-success" > Rate Jokes  </button> {{num_completed}} of {{num_total}} completed <br>
+        {{/each}}
+        
+        {{#if createRatingBatchButton}}
+          <button id="createRatingBatch" class="btn btn-success"> Start Rating Jokes</button>
+        {{/if}}
+
+        <!--
+        {{#each analysisBatches}}
+          Analyze Jokes <button class="analysisBatch"> {{num_completed}} / {{num_total}}</button> <br>
+        {{/each}}
+        
+        {{#if createAnalysisBatchButton}}
+          <button id="createAnalysisBatch"> Analyze Jokes 0/15</button>
+        {{/if}}
+        -->
+      </div>
+      <div class='col-md-2'></div>
+    </div>
+
+
+
+
+   
+  </div>
+</template>
+

@@ -1,0 +1,81 @@
+
+
+<template name="activity">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <div class='title' align="center">Reactions and Brainstorming</div>      
+        <div class="report">
+          <b>Thank you for rating jokes!</b><br>
+          <p>
+          In this last stage there are no jokes, only headlines. We are going to ask you to react to what you read in headlines and brainstorm some ways to expand it. (Eventually, this could lead to creating jokes). 
+          </p>
+          <p>
+          We will ask you to read a headline an spend 30 seconds writing down your thoughts as to:
+          </p>
+          <p>
+          <b>1. Reactions to the whole thing</b><br>
+          <i> Example for headline "People Bending iPhones At Apple Stores":<br>
+          That's horrible. People are so rude, disrespectful.<br>
+          I guess they're curious about what they read, that's natural.<br>
+          </i>
+          </p>
+          
+          <p>
+          <b>2. Reactions to parts of the headline </b>(in or out of context.)<br>
+          <i> Example:<br>
+          iPhones:  expensive and posh, status symbols.<br>
+          Apple Stores: busy and upscale. Fun to visit. Toys to play with.<br>
+          Breaking stuff in stores: bad. You break it, you buy it.<br>
+          </i> 
+          </p>
+          
+          <p>
+          <b>3. People associated with the headline.</b> If they have a point of view, write that too.<br>
+          <i> Example:<br>
+          Customers who break phones: just curious<br>
+          Customers who don't break phones: wish they could. resist the temptation.<br>
+          Apple executives: furious. fear unruly customers.<br>
+          Other tech companies executives: might encourage breaking phones.<br>
+          </i>
+          </p>
+          
+          <p>
+          
+          <b>4. Expand on any of the things you wrote for parts 1-3</b>.
+          <br>
+          <i>Example: <br>
+          Maybe it's really the competitors breaking them.<br>
+          Maybe Apple shouldn't make products that can be bent. They should issue a recall.<br>
+          You break it, you buy it. Maybe this is their plan to sell phones.
+          </i>
+          </p>
+                    
+          
+          
+        
+        <br>
+        React to headlines: 
+        
+        
+        {{#each reactionBatches}}
+          <button id="reactionBatch" class="btn btn-success" > Reaction Exercises  </button> {{num_completed}} of {{num_total}} completed <br>
+        {{/each}}
+        
+        {{#if createReactionBatchButton}}
+          <button id="createReactionBatch" class="btn btn-success">Start reaction exercises</button>
+        {{/if}}
+        </div>
+      </div>
+      <div class='col-md-2'></div>
+    </div>
+
+    
+
+        
+  </div>
+  
+  
+  
+</template>
