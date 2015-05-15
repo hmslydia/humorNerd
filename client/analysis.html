@@ -5,143 +5,110 @@
     <div class='row'>
       <div class='col-md-2'></div>
       <div class='col-md-8'>
-        <div class='title' align="center">Analyze Jokes</div>      
-        <b>Instructions Part 1</b>: Read the headline (left) and the joke (right). First, we want to see how the elements in the joke correspond to things in the headline. Copy and paste phrases in the joke with corresponding phrases in the headline. Sometimes the match will be exact, sometimes it will be more oblique or referential. See the examples for details. 
-       Example 1<br>
-       Example 2<br>
-       Example 3 <br>
+        <div class='title' align="center">Analyze Jokes ({{num_doing}} of {{analysisBatch.num_total}})</div>      
+        
+        <div align="center"><a href="../../analysisInstructions" target="blank">See Instructions Page</a><br></div>
        <br>
       </div>
       <div class='col-md-2'></div>
     </div>
     
     <div class='row'>
-      <div class='col-md-1'></div>    
-      <div class='col-md-5'>       
-        <div class="headline">{{{analysisTask.headline_text}}}</div>
-        <div class="description">{{{analysisTask.description_text}}}</div>        
-      </div>
-      <div class='col-md-4'>       
-        <div class="voiceImage">{{{analysisTask.voice_image}}}</div>
-        <div class="voiceText">{{{analysisTask.voice_text}}}</div>        
-      </div>
-      <div class='col-md-2'></div>
-    </div>
+      <div class='col-md-4'></div>    
+      <div class='col-md-8'>  
+        <div class="headline-box">
+          <div class="headline">{{{analysisTask.headline_text}}}</div>
+          <div class="description">{{{analysisTask.description_text}}}</div> 
+        </div> 
+        <!--
+        <br>
+        <br>    
+        <img src="../../{{analysisTask.voice_image}}"/><br>
+        <div class="voiceText" style="width: 300px">{{{analysisTask.voice_text}}}</div>  <br> 
+        -->
+      </div> 
+      <div class='col-md-0'></div>
+    </div> 
+    
+
+        
+              
+    <!--  
  
      <div class='row'>
-      <div class='col-md-2'> </div>
-      <div class='col-md-4'> 
-        Headline text  <br>    
-        <input type="text" class="answer" id="headline-1"/>
-        <input type="text" class="answer" id="headline-2"/>
-        <input type="text" class="answer" id="headline-3"/>
-        <input type="text" class="answer" id="headline-4"/>
-        <input type="text" class="answer" id="headline-5"/>   
+      <div class='col-md-2'> 
+        <img src="../../{{analysisTask.voice_image}}"/> 
       </div>
-      <div class='col-md-4'> 
-        Matching joke text<br>      
-        <input type="text" class="answer" id="joke-1"/><br>
-        <input type="text" class="answer" id="joke-2"/><br>
-        <input type="text" class="answer" id="joke-3"/><br>
-        <input type="text" class="answer" id="joke-4"/><br>
-        <input type="text" class="answer" id="joke-5"/><br>
+      <div class='col-md-2'>        
+        <div class="voiceText" >{{{analysisTask.voice_text}}}</div>
       </div>
-      <div class='col-md-2'></div>
+      <div class='col-md-2'> 
+        <b>Joke </b> noun  <br>  
+        <input type="text" class="answer analysis-joke" id="joke-1"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-2"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-3"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-4"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-5"/><br>  
+      </div>
+      <div class='col-md-2'> 
+         <b>Headline</b> noun<br>        
+        <input type="text" class="answer analysis-headline" id="headline-1"/>
+        <input type="text" class="answer analysis-headline" id="headline-2"/>
+        <input type="text" class="answer analysis-headline" id="headline-3"/>
+        <input type="text" class="answer analysis-headline" id="headline-4"/>
+        <input type="text" class="answer analysis-headline" id="headline-5"/> 
+      </div>
+      <div class='col-md-3'> 
+         <b>Relationship</b> (if non-obvious)<br>      
+        <input type="text" class="answer analysis-relationship" id="relationship-1"/><br>
+        <input type="text" class="answer analysis-relationship" id="relationship-2"/><br>
+        <input type="text" class="answer analysis-relationship" id="relationship-3"/><br>
+        <input type="text" class="answer analysis-relationship" id="relationship-4"/><br>
+        <input type="text" class="answer analysis-relationship" id="relationship-5"/><br>
+      </div>
+      
     </div>
-    <br>
+    -->
+    {{#each analysisTask.voices}}
     <br>
      <div class='row'>
-      <div class='col-md-2'> </div>
-      <div class='col-md-8'>  
-        <b>Instructions Part 2</b>: Now, forget the headline and just think about the joke. We want to know what is going on beneath the surface of the joke. For example, often a joke is criticizing someone. Often, we express criticisms in a round about way, rather than directly. There is no right answer. Everybody interprets jokes differently. Answer as many of the questions as you can. Many times there is no answer. If there are multiple answers, list them all, separated with a comma. 
-        <br>
-        Joke:
-        <div class="voiceText">{{{analysisTask.voice_text}}}</div> 
-        <br> 
-        <br>
-        <table>    
-
-
-          <tr>
-            <td>              
-              Criticism
-            </td>
-            <td>             
-              
-            </td>
-          </tr>
-
-          <tr>
-            <td>              
-              &nbsp;&nbsp;&nbsp;&nbsp;Who is being criticized?
-            </td>
-            <td>             
-              <input type="text" class="answer" id="crit-who"/>
-            </td>
-          </tr>
-          
-          <tr>
-            <td>              
-              &nbsp;&nbsp;&nbsp;&nbsp;What for?
-            </td>
-            <td>             
-              <input type="text" class="answer" id="crit-why"/>
-            </td>
-          </tr>
-          
-          <br>
-          
-          <tr>
-            <td>              
-              Whose point of view is presented?
-            </td>
-            <td>             
-              <input type="text" class="answer" id="pov"/>
-            </td>
-          </tr>
-
-          <br>
-
-          <tr>
-            <td>              
-              Is there any unusually specific language?
-            </td>
-            <td>             
-              <input type="text" class="answer" id="lang"/>
-            </td>
-          </tr>
-
-          <br>
-
-          <tr>
-            <td colspan="2">              
-              Emotionally charged language <i>(separate terms with a comma)</i>
-            </td>
-          </tr>        
-          <tr>
-            <td>              
-              &nbsp;&nbsp;&nbsp;&nbsp;Positive
-            </td>
-            <td>             
-              <input type="text" class="answer" id="emotion-positive"/>
-            </td>
-          </tr>  
-          
-                    <tr>
-            <td>              
-              &nbsp;&nbsp;&nbsp;&nbsp;Negative
-            </td>
-            <td>             
-              <input type="text" class="answer" id="emotion-negative"/>
-            </td>
-          </tr>  
-
-        </table>  
+      <div class='col-md-2'> 
+        <img src="../../{{this.voice_image}}"/> 
       </div>
-      <div class='col-md-2'></div>
+      <div class='col-md-2'>        
+        <div class="voiceText" >{{{this.voice_text}}}</div>
+      </div>
+      <div class='col-md-2'> 
+        <b>Joke </b> chunk  <br>  
+        <input type="text" class="answer analysis-joke" id="joke-1"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-2"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-3"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-4"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-5"/><br> 
+        
+
+      </div>
+            
+      <div class='col-md-2'> 
+         <b>Headline</b> chunk<br>        
+        <input type="text" class="answer analysis-headline" id="headline-1"/>
+        <input type="text" class="answer analysis-headline" id="headline-2"/>
+        <input type="text" class="answer analysis-headline" id="headline-3"/>
+        <input type="text" class="answer analysis-headline" id="headline-4"/>
+        <input type="text" class="answer analysis-headline" id="headline-5"/> 
+      </div>
+      <div class='col-md-3'> 
+         <b>Relationship</b> (if non-obvious)<br>      
+        <input type="text" class="answer analysis-relationship" id="relationship-1"/><br>
+        <input type="text" class="answer analysis-relationship" id="relationship-2"/><br>
+        <input type="text" class="answer analysis-relationship" id="relationship-3"/><br>
+        <input type="text" class="answer analysis-relationship" id="relationship-4"/><br>
+        <input type="text" class="answer analysis-relationship" id="relationship-5"/><br>
+      </div>
+      
     </div>
     
-        
+    {{/each}}
     
     <!--
     {{#each ratingTask.voices}}

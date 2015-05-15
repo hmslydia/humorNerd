@@ -54,6 +54,33 @@ submitAnalysis = function (){
   
 }
 
+Template.analysis.helpers({
+  num_doing: function(){
+    return AnalysisTaskBatchAssignments.findOne().num_completed + 1
+  }
+})
+
+Template.analysis.helpers({
+  answers: function(){
+    obj = {first:
+      [{joke: "jokeA", headline:"headline", relationship:"relatioship"},
+       {joke: "jokeB", headline:"headline", relationship:"relatioship"}
+      ],
+      second:
+      [
+        {joke: "jokeA", headline:"headline", relationship:"relatioship"},
+       {joke: "jokeB", headline:"headline", relationship:"relatioship"}
+      ],
+      third:
+      [
+        {joke: "jokeA", headline:"headline", relationship:"relatioship"},
+       {joke: "jokeB", headline:"headline", relationship:"relatioship"}
+      ]
+      }
+    return obj
+  }
+})
+
 Template.analysis.events({
   'click #submit ': function(event){
       var validEntry = validateAnalysis()

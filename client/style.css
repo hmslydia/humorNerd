@@ -29,11 +29,11 @@
 tr.spaceUnder > td {
   padding-bottom: .5em;
 } 
-
+/*
 .answer{
   width: 300px;
 } 
-
+*/
 .report{
   border: 1px solid black;
   padding: 10px;
@@ -61,3 +61,38 @@ textarea:disabled {
   font-size:large;
   font-weight: bold;
 }
+
+.analysis-joke{
+  width: 100%;
+}
+
+.analysis-headline{
+  width: 100%;
+}
+
+.analysis-relationship{
+  width: 100%;
+}
+
+.list-noun{
+  width: 200px;
+  margin-right: 10px;
+}
+
+.list-associated-noun{
+  width: 400px;
+}
+
+.radio-container{
+  height: 27px;
+}
+
+.radio-container .radio_answer_text{
+  margin-left:  2px;
+  margin-right:  5px;
+}
+
+.highlighted-example{
+  background-color: yellow;
+}
+

@@ -66,7 +66,11 @@ Meteor.publish('analysisTaskBatchAssignments', function(){
 
 Meteor.publish('analysisTaskBatchAssignmentsByIdAndRatingTask', function(batch_id,num){
   var analysisTaskBatch = AnalysisTaskBatchAssignments.find(batch_id)
-  var analysisTaskId = analysisTaskBatch.fetch()[0]["analysis_task_ids"][parseInt(num)];
+  var analysisTaskId = []
+  if(analysisTaskBatch.fetch()){
+    analysisTaskId = analysisTaskBatch.fetch()[0]["analysis_task_ids"][parseInt(num)];
+  }
+  
   return [analysisTaskBatch, AnalysisTasks.find(analysisTaskId)];
 })
 
@@ -111,4 +115,8 @@ Meteor.publish('reactionLog', function(){
 
 Meteor.publish('feedback', function(){
   return Feedback.find()
+})
+
+Meteor.publish('taskIds', function(){
+  return TaskIds.find()
 })

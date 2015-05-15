@@ -19,7 +19,7 @@ insertReactionTasksFromOnion  = function(headline_ids){
         reaction_task_ids.push(reaction_task_id)        
       })
       */
-      
+      console.log("reaction: "+headlineObj.headline_text)
       var reaction_task_id = ReactionTasks.insert(headlineObj)
       reaction_task_ids.push(reaction_task_id)
     })

@@ -5,143 +5,238 @@
     <div class='row'>
       <div class='col-md-2'></div>
       <div class='col-md-8'>
-        <div class='title' align="center">Reaction Exercise ({{num_doing}} of {{reactionBatch.num_total}})</div>  
+        <div class='title' align="center">Writing Exercise ({{num_doing}} of {{reactionBatch.num_total}})</div>  
         <div id="intro">
-          There are 4 parts to this exercise. Each part takes under a minute.<br>
-          Press start, and you can start enter your reactions.<br>
-          When the time is up you can move on or keep writing if you are on a roll.<br>
+          
+          <div align="center"><a href="../../reactionInstructions" target="blank">See Instructions Page</a><br></div>
         </div>   
-        <br>
-        <br>
-        <div id="part1">
-          <span class="part-title">Part 1. Reactions to Headline</span><br>
-          <i> Example: That's horrible. People are so rude, disrespectful.
-          </i>
-          <br>
-          
-          <div class="headline-box">
-            <div class="headline">{{{reactionTask.headline_text}}}</div>
-            <div class="description">{{{reactionTask.description_text}}}</div>
-          </div>
-          <table>
-            <tr>
-              <td>
-                <div class="start-button-container">
-                  <button id="start-part1" class="btn btn-success"> Start listing reactions</button> (one per line)
-                </div>
-              </td>
-              <td>
-                <span id="part1-timer" class="timer"></span>
-              </td>
-            </tr>  
-          </table>
-          <br>
-          <textarea id="reaction-part1" class="answer reaction-textarea" disabled="true" > </textarea>  
-          <br>
-          <span id="part2-message" style="display:none"><i>You may now move to the next part when you are ready.</i></span>
-        </div>
         
-        <br><br>
-        <div id="part2" style="display:none">
-          <span class="part-title">Part 2. Reaction to Parts of the Headline</span><br>
-        
-          <i> Example:<br>
-          iPhones:  expensive and posh, status symbols.
-          </i>         
-          <br>
           
-          <div class="headline-box">
-            <div class="headline">{{{reactionTask.headline_text}}}</div>
-            <div class="description">{{{reactionTask.description_text}}}</div>
-          </div>
-          <table>
-            <tr>
-              <td>
-                <div class="start-button-container">
-                  <button id="start-part2" class="btn btn-success"> Start listing reactions</button> (one per line)
-                </div>
-              </td>
-              <td>
-                <span id="part2-timer" class="timer"></span>
-              </td>
-            </tr>  
-          </table>
-          <br>
-          <textarea id="reaction-part2" class="answer reaction-textarea" disabled="true" ></textarea>  
-                    <br>
-          <span id="part3-message" style="display:none"><i>You may now move to the next part when you are ready.</i></span>
-        </div>
+ 
+        <div class="headline-box">
+          <div class="headline">{{{reactionTask.headline_text}}}</div>
+          <div class="description">{{{reactionTask.description_text}}}</div> 
+        </div> 
 
-        <br><br><br>
-        <div id="part3" style="display:none">
-          <span class="part-title">Part 3. People and Points of view</span><br>
-          <br>
-          <i> Example:<br> Customers who break phones: just curious<br>
-          </i>
-
-          
-          <div class="headline-box">
-            <div class="headline">{{{reactionTask.headline_text}}}</div>
-            <div class="description">{{{reactionTask.description_text}}}</div>
-          </div>
-          <table>
-            <tr>
-              <td>
-                <div class="start-button-container">
-                  <button id="start-part3" class="btn btn-success"> Start listing reactions</button> (one per line)
-                </div>
-              </td>
-              <td>
-                <span id="part3-timer" class="timer"></span>
-              </td>
-            </tr>  
-          </table>
-          <br>
-          <textarea id="reaction-part3" class="answer reaction-textarea" disabled="true" ></textarea>  
-                    <br>
-          <span id="part4-message" style="display:none"><i>You may now move to the next part when you are ready.</i></span> 
-        </div>  
-              
-        <br><br><br>
-        <div id="part4" style="display:none">
-          <span class="part-title">Part 4. Expansion</span><br>
-          Start with any of your ideas from before and write down ideas for expanding them.<br> 
-
-          
-          <br>
-          
-          <div class="headline-box">
-            <div class="headline">{{{reactionTask.headline_text}}}</div>
-            <div class="description">{{{reactionTask.description_text}}}</div>
-          </div>
-          <table>
-            <tr>
-              <td>
-                <div class="start-button-container">
-                  <button id="start-part4" class="btn btn-success"> Start listing reactions</button> (one per line)
-                </div>
-              </td>
-              <td>
-                <span id="part4-timer" class="timer"></span>
-              </td>
-            </tr>  
-          </table>
-          <br>
-          <textarea id="reaction-part4" class="answer reaction-textarea" disabled="true" ></textarea>  
-                    <br>
-          
-        </div>
-        <div id="submitButton" style="visibility:hidden">
-          <span ><i>You may click 'submit' when you are ready.</i></span> <br>
-          <button id='submit' class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-      <div class='col-md-2'></div>
-    </div>
-
+        <table>
+          <tr>
+            <td>Chunks in the headline</td>
+            <td>Associations (comma separated)</td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-1"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-1"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-2"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-2"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-3"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-3"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-4"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-4"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-5"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-5"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-6"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-6"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-7"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-7"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-8"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-8"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-9"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-9"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun" id="list-noun-10"/></td>
+            <td><input type="text" class="answer list-associated-noun" id="list-associated-10"/></td>
+          </tr>
+        </table>
+    
+    
     
 
+      </div>
+      <div class='col-md-2'></div>
+    </div> 
+    
+    <div class='row'>
+      <div class='col-md-5'> </div>
+      <div class='col-md-5'> 
+          <div id="selfAssessmentButton" >
+            <br>
+                      <button id='selfAssessment' class="btn btn-primary">Proceed to self-assessment</button><br><br>
+                      
+                      
+        </div>
+      </div>  
+      <div class='col-md-2'> </div>  
+    </div> 
+    
+    <div class='row'>
+      <div class='col-md-2'> </div>
+      <div class='col-md-8'> 
+
+          <div align="center">
+            <img height="50px" src="../../Black_Down_Arrow.png"/>
+          </div>
+          
+          <br>
+          <br>
+          <br>
         
+      </div>  
+      <div class='col-md-2'> </div>  
+    </div>     
+    
+
+       
+    <div id="selfAssessmentContainer" style="visibility:hidden">
+     <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <div class='title' align="center">Self-Assessment</div>
+      </div>
+      <div class='col-md-2'></div>
+     </div>
+
+
+        <div class='row'>
+      <div class='col-md-4'></div>    
+      <div class='col-md-8'>  
+        <div class="headline-box">
+          <div class="headline">{{{reactionTask.headline_text}}}</div>
+          <div class="description">{{{reactionTask.description_text}}}</div> 
+        </div> 
+        <!--
+        <br>
+        <br>    
+        <img src="../../{{analysisTask.voice_image}}"/><br>
+        <div class="voiceText" style="width: 300px">{{{analysisTask.voice_text}}}</div>  <br> 
+        -->
+      </div> 
+      <div class='col-md-0'></div>
+    </div> 
+
+      
+      {{#each reactionTask.voices}}
+      <br>
+      
+      
+     <div class='row'>
+      <div class='col-md-2'> 
+        <img src="../../{{this.voice_image}}"/> 
+      </div>
+      <div class='col-md-2'>        
+        <div class="voiceText" >{{{this.voice_text}}}</div>
+      </div>
+      <div class='col-md-2'> 
+        <b>Joke</b> chunk  <br>  
+        <input type="text" class="answer analysis-joke" id="joke-1"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-2"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-3"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-4"/><br>
+        <input type="text" class="answer analysis-joke" id="joke-5"/><br> 
+        
+
+      </div>
+            
+      <div class='col-md-2'> 
+         <b>Headline</b> chunk<br>        
+        <input type="text" class="answer analysis-headline" id="headline-1"/>
+        <input type="text" class="answer analysis-headline" id="headline-2"/>
+        <input type="text" class="answer analysis-headline" id="headline-3"/>
+        <input type="text" class="answer analysis-headline" id="headline-4"/>
+        <input type="text" class="answer analysis-headline" id="headline-5"/> 
+      </div>
+      <div class='col-md-3'> 
+         <b>Did you have this?</b> <br>      
+        
+        
+        <div class="radio-container">
+        <input type="radio" name="rating_{{voice_id}}_1" data-id= "{{this.voice_id}}" value="yes">
+        <span id ='yes' class='radio_answer_text'>Yes</span>
+        
+        <input type="radio" name="rating_{{voice_id}}_1" data-id= "{{this.voice_id}}" value="no">
+        <span id ='no' class='radio_answer_text'>No</span>
+        
+        <input type="radio" name="rating_{{voice_id}}_1" data-id= "{{this.voice_id}}" value="kinda" >
+        <span id ='kinda' class='radio_answer_text'>Kinda</span>
+        
+        </div>
+        
+        <div class="radio-container">
+          <input type="radio" name="rating_{{voice_id}}_2" data-id= "{{this.voice_id}}" value="yes">
+          <span id ='yes' class='radio_answer_text'>Yes</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_2" data-id= "{{this.voice_id}}" value="no">
+          <span id ='no' class='radio_answer_text'>No</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_2" data-id= "{{this.voice_id}}" value="kinda" ><span id ='kinda' class='radio_answer_text'>Kinda</span>
+        </div>
+        
+        <div class="radio-container">
+          <input type="radio" name="rating_{{voice_id}}_3" data-id= "{{this.voice_id}}" value="yes">
+          <span id ='yes' class='radio_answer_text'>Yes</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_3" data-id= "{{this.voice_id}}" value="no">
+          <span id ='no' class='radio_answer_text'>No</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_3" data-id= "{{this.voice_id}}" value="kinda" ><span id ='kinda' class='radio_answer_text'>Kinda</span>
+        </div>
+        
+        <div class="radio-container">
+          <input type="radio" name="rating_{{voice_id}}_4" data-id= "{{this.voice_id}}" value="yes">
+          <span id ='yes' class='radio_answer_text'>Yes</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_4" data-id= "{{this.voice_id}}" value="no">
+          <span id ='no' class='radio_answer_text'>No</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_4" data-id= "{{this.voice_id}}" value="kinda" ><span id ='kinda' class='radio_answer_text'>Kinda</span>
+        </div>
+        
+        
+        <div class="radio-container">
+          <input type="radio" name="rating_{{voice_id}}_5" data-id= "{{this.voice_id}}" value="yes">
+          <span id ='yes' class='radio_answer_text'>Yes</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_5" data-id= "{{this.voice_id}}" value="no">
+          <span id ='no' class='radio_answer_text'>No</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_5" data-id= "{{this.voice_id}}" value="kinda" ><span id ='kinda' class='radio_answer_text'>Kinda</span>
+        </div>
+                   
+
+      </div>
+      
+    </div>
+    
+    {{/each}}
+        
+        
+     <div class='row'>
+      <div class='col-md-5'> </div>
+      <div class='col-md-5'> 
+          <div id="submitButton" >
+          <span ><i>You may submit whenever you are ready.</i></span> <br>
+          <button id='submit' class="btn btn-primary">Submit</button>
+        </div>
+      </div>  
+      <div class='col-md-2'> </div>  
+    </div>    
+  </div>
   </div>
   
   

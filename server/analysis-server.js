@@ -8,18 +8,24 @@ insertAnalysisTasksFromOnion  = function(headline_ids){
       headlineObj.headline_id = headlineObj._id
       delete headlineObj._id
       
-      var voices = headlineObj["voices"]
+      
+      //var voices = headlineObj["voices"]
+      var analysis_task_id = AnalysisTasks.insert(headlineObj) 
+      console.log("analysis: "+headlineObj.headline_text)
+      analysis_task_ids.push(analysis_task_id) 
+      /*
       _.each(voices, function(voiceObj){
         //insert into RatingTasks
         headlineObj["voice_id"] = voiceObj.voice_id
         headlineObj["voice_text"] = voiceObj.voice_text
         headlineObj["voice_image"] = voiceObj.voice_image
-        var analysis_task_id = AnalysisTasks.insert(headlineObj) 
+        
         
         analysis_task_ids.push(analysis_task_id)        
       })
-
+      */
     })
+  TaskIds.insert({name: "analysis_task_ids1", task_id_array: analysis_task_ids})   
   return analysis_task_ids  
   
 }

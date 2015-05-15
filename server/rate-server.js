@@ -44,7 +44,7 @@ insertRatingTasksFromOnion  = function(headline_ids){
       
       //insert into RatingTasks
       var rating_task_id = RatingTasks.insert(headlineObj) 
-      
+      console.log("rating: "+headlineObj.headline_text)
       //insert into RatingCount
       _.each(headlineObj["voices"], function(voiceObj){
         var countObj = {

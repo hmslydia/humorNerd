@@ -66,7 +66,10 @@ Meteor.methods({
   ANALYSIS
 */
   createAnalysisBatch: function(){
-    
+    var analysis_task_ids1 = TaskIds.findOne({name: "analysis_task_ids1"}).task_id_array
+    console.log("analysis_task_ids1")
+    console.log(analysis_task_ids1)
+        
     var analysisTaskBatchAssignmentId = insertAnalysisTaskBatchAssignments(Meteor.userId(), analysis_task_ids1)
     return analysisTaskBatchAssignmentId
     
@@ -215,15 +218,17 @@ insertHeadlines = function(startIndex, endIndex){
 
 Meteor.startup(function () {	
   if (Headlines.find().count() === 0) {
-    var headline_ids1 = insertHeadlines(0, 3)
-    rating_task_ids1 = insertRatingTasksFromOnion(headline_ids1)
+    var headline_ids = insertHeadlines(0, 20)
+    var headline_ids_subselect1 = [headline_ids[1], headline_ids[4]]
+    var rating_task_ids1 = insertRatingTasksFromOnion(headline_ids_subselect1)
     
-    //var headline_ids2 = insertHeadlines(3, 5)
-    //analysis_task_ids1 = insertAnalysisTasksFromOnion(headline_ids2)
+    //var headline_ids2 = insertHeadlines(0, 10)
+    var headline_ids_subselect2 = [headline_ids[5], headline_ids[14]]
+    var analysis_task_ids1 = insertAnalysisTasksFromOnion(headline_ids_subselect2)
     
-    var headline_ids3 = insertHeadlines(3, 9)
-    var headline_ids_subselect = [headline_ids3[1], headline_ids3[2]]
+    //var headline_ids3 = insertHeadlines(3, 9)
+    var headline_ids_subselect3 = [headline_ids[16], headline_ids[18]]
     
-    reaction_task_ids1 = insertReactionTasksFromOnion(headline_ids_subselect)
+    var reaction_task_ids1 = insertReactionTasksFromOnion(headline_ids_subselect3)
   } 
 })

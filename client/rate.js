@@ -39,7 +39,7 @@ submitRating = function (){
     var new_num = data.num_completed
     var completed = data.completed
     if(completed){
-      Router.go("activity")
+      Router.go("home")
     }else {
       Router.go('rate', {batch_id: thisRatingTaskBatchAssignmentId, num: new_num})
     }

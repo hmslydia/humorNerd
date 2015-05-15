@@ -13,31 +13,55 @@
       <div class='col-md-2'></div>
       <div class='col-md-8'>
         <div class='title' align="center">HumorNerd</div>   
-        <img src="OnionFaces.png"/> <br>
-        HumorNerd is an online challenge to collaboratively mimic The Onion's style of humor. Our goals are to understand what is funny about The Onion and to be able to create humor that is as good as theirs.<br>
+        <img height="250px" src="OnionFaces.png"/> <br>
+        
+        HumorNerd is an online challenge to collaboratively mimic The Onion's style of humor. Our goals are to understand what is funny about The Onion and to be able to create humor that is as good as theirs.
+        <i>
+        You can help!</i><br>
         <br>
-        You can help!<br>
+        Please do the following tasks in the order they are listed.<br>
+        
+        <!--
         <br>
         Help us find the funniest Onion jokes by rating how funny you find their jokes.<br>
         <br> 
-          
-        {{#each ratingBatches}}
-          <button id="ratingBatch" class="btn btn-success" > Rate Jokes  </button> {{num_completed}} of {{num_total}} completed <br>
+         -->
+         <!--
+         Below are three tasks and their instructions. Please do them in order as best you can without worrying too much about whether you're doing it "right" or "giving me what I want." I just want your natural responses. And if you get stuck and don't know what to respond or don't understand what to do, I want to know that too.
+         -->
+         
+         <br>
+        Rating Jokes (2 min): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{#each ratingBatches}}
+          <button id="ratingBatch" class="btn btn-success" > Rate Jokes </button> {{num_completed}} of {{num_total}} completed 
         {{/each}}
         
         {{#if createRatingBatchButton}}
           <button id="createRatingBatch" class="btn btn-success"> Start Rating Jokes</button>
         {{/if}}
-
-        <!--
+<br>
+<br>
+        
+        Analyzing Jokes (10 min): <a id="analysisInstructions" href="analysisInstructions" class="btn btn-success"> Instructions</a>
+        
+        
         {{#each analysisBatches}}
-          Analyze Jokes <button class="analysisBatch"> {{num_completed}} / {{num_total}}</button> <br>
+          <button id="analysisBatch" class="btn btn-success"> Analyze Jokes {{num_completed}} / {{num_total}}</button> <br>
         {{/each}}
         
         {{#if createAnalysisBatchButton}}
-          <button id="createAnalysisBatch"> Analyze Jokes 0/15</button>
+          <button id="createAnalysisBatch" class="btn btn-success"> Start Analyzing Jokes</button>
         {{/if}}
-        -->
+<br>
+<br>
+        Writing Exercise (10 min): <a id="listInstructions" href="reactionInstructions" class="btn btn-success"> Instructions</a>
+        {{#each listHeadlineNounsBatches}}
+          <button id="listingHeadlineNounsBatch" class="btn btn-success"> Writing Exercises {{num_completed}} / {{num_total}}</button> <br>
+        {{/each}}
+        
+        {{#if createListHeadlineNounsBatchButton}}
+          <button id="createListingHeadlineNounsBatch" class="btn btn-success"> Start Writing Exercises</button>
+        {{/if}}
+        
       </div>
       <div class='col-md-2'></div>
     </div>
