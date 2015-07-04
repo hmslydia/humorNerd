@@ -1,0 +1,253 @@
+
+
+<template name="reactionInstructions">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <div class='title' align="center">Instructions Writing Exercise </div>  
+        <div id="intro">
+          <b>Instructions</b>
+          Given a headline, we want you to list all the "meaningful chunks". <br>
+          For each chunk, list any associated things, people or ideas. <br>
+          For example, <br>
+          <ul>
+            <li>"parents" are are associated with "children", </li>  
+            <li>"men" are associated with "women"</li>  
+            <li>competitors are often associated to business, like "McDonald's" and "Burger King."</li>  
+          </ul>
+          These associations will help you start brainstorming later on.
+          
+          <br>
+          <br>
+          <div class='title' align="center">Example </div>
+        </div>   
+        
+          
+ 
+        <div class="headline-box">
+          <div class="headline">{{{headline_text}}}</div>
+          <div class="description">{{{description_text}}}</div> 
+        </div> 
+
+        <table>
+          <tr>
+            <td>Chunk in the headline</td>
+            <td>Associations (comma separated)</td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun {{list_noun_1_class}}" id="list-noun-1" value="{{list_noun_1}}"/></td>
+            <td><input type="text" class="answer list-associated-noun {{list_associated_1_class}}" id="list-associated-1" value="{{list_associated_1}}"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun {{list_noun_2_class}}" id="list-noun-2" value="{{list_noun_2}}"/></td>
+            <td><input type="text" class="answer list-associated-noun {{list_associated_2_class}}" id="list-associated-2" value="{{list_associated_2}}"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun {{list_noun_3_class}}" id="list-noun-3" value="{{list_noun_3}}"/></td>
+            <td><input type="text" class="answer list-associated-noun  {{list_associated_3_class}}" id="list-associated-3" value="{{list_associated_3}}"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun {{list_noun_4_class}}" id="list-noun-4" value="{{list_noun_4}}"/></td>
+            <td><input type="text" class="answer list-associated-noun {{list_associated_4_class}}" id="list-associated-4" value="{{list_associated_4}}"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun {{list_noun_5_class}}" id="list-noun-5" value="{{list_noun_5}}"/></td>
+            <td><input type="text" class="answer list-associated-noun  {{list_associated_5_class}}" id="list-associated-5" value="{{list_associated_5}}"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun  {{list_noun_6_class}}" id="list-noun-6" value="{{list_noun_6}}"/></td>
+            <td><input type="text" class="answer list-associated-noun  {{list_associated_6_class}}" id="list-associated-6" value="{{list_associated_6}}"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun {{list_noun_7_class}}" id="list-noun-7" value="{{list_noun_7}}"/></td>
+            <td><input type="text" class="answer list-associated-noun  {{list_associated_7_class}}" id="list-associated-7" value="{{list_associated_7}}"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun {{list_noun_8_class}}" id="list-noun-8" value="{{list_noun_8}}"/></td>
+            <td><input type="text" class="answer list-associated-noun  {{list_associated_8_class}}" id="list-associated-8" value="{{list_associated_8}}"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun {{list_noun_9_class}}" id="list-noun-9" value="{{list_noun_9}}"/></td>
+            <td><input type="text" class="answer list-associated-noun  {{list_associated_9_class}}" id="list-associated-9" value="{{list_associated_9}}"/></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="answer list-noun {{list_noun_10_class}}" id="list-noun-10" value="{{list_noun_10}}"/></td>
+            <td><input type="text" class="answer list-associated-noun  {{list_associated_10_class}}" id="list-associated-10"  value="{{list_associated_10}}"/></td>
+          </tr>
+        </table>
+    
+    
+    
+
+      </div>
+      <div class='col-md-2'></div>
+    </div> 
+    
+    <div class='row'>
+      <div class='col-md-5'> </div>
+      <div class='col-md-5'> 
+          <div id="selfAssessmentButton" >
+            <br>
+          <span ><i>Once you have listed all the "meaningful chunks", proceed to the self-assessment stage</i></span> <br>
+          
+          
+          
+                    <br>
+          <br>
+          <br>
+        </div>
+      </div>  
+      <div class='col-md-2'> </div>  
+    </div> 
+    
+    
+
+       
+    <div id="selfAssessmentContainer" >
+     <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <div class='title' align="center">Self-Assessment</div>
+        Read the jokes for this headline.<br>
+        Do the same type of analysis you did previously: match chunks in the joke to chunks in the headline.<br>
+        Additionally, for each matching chunk in the headline, say whether you mentioned it in the writing exercise above. If you mentioned something close, that's good enough. <br>
+        <br>
+        There is no right or wrong answer. The point of this is to train yourself to notice things in headlines similar to what the joke writers see.<br>
+        
+      </div>
+      <div class='col-md-2'></div>
+     </div>
+
+
+        <div class='row'>
+      <div class='col-md-4'></div>    
+      <div class='col-md-8'>  
+        <div class="headline-box">
+          <div class="headline">{{{headline_text}}}</div>
+          <div class="description">{{{description_text}}}</div> 
+        </div> 
+        <!--
+        <br>
+        <br>    
+        <img src="../../{{analysisTask.voice_image}}"/><br>
+        <div class="voiceText" style="width: 300px">{{{analysisTask.voice_text}}}</div>  <br> 
+        -->
+      </div> 
+      <div class='col-md-0'></div>
+    </div> 
+
+      
+      {{#each voices}}
+      <br>
+      
+      
+     <div class='row'>
+      <div class='col-md-2'> 
+        <img src="../../{{this.voice_image}}"/> 
+      </div>
+      <div class='col-md-2'>        
+        <div class="voiceText" >{{{this.voice_text}}}</div>
+      </div>
+      
+      <div class='col-md-2'> 
+        <b>Joke </b> chunk  <br>  
+        <input type="text" class="answer analysis-joke {{this.joke_1_class}}" id="joke_1" value="{{this.joke_1}}" /><br>
+        <input type="text" class="answer analysis-joke {{this.joke_2_class}}" id="joke_2" value="{{this.joke_2}}"/><br>
+        <input type="text" class="answer analysis-joke {{this.joke_3_class}}" id="joke_3" value="{{this.joke_3}}"/><br>
+        <input type="text" class="answer analysis-joke {{this.joke_4_class}}" id="joke_4" value="{{this.joke_4}}"/><br>
+        <input type="text" class="answer analysis-joke {{this.joke_5_class}}" id="joke_5" value="{{this.joke_5}}"/><br> 
+        
+
+      </div>
+            
+      <div class='col-md-2'> 
+         <b>Headline</b> chunk<br>        
+        <input type="text" class="answer analysis-headline {{this.headline_1_class}}" id="headline_1" value="{{this.headline_1}}"/>
+        <input type="text" class="answer analysis-headline {{this.headline_2_class}}" id="headline_2" value="{{this.headline_2}}"/>
+        <input type="text" class="answer analysis-headline {{this.headline_3_class}}" id="headline_3" value="{{this.headline_3}}"/>
+        <input type="text" class="answer analysis-headline {{this.headline_4_class}}" id="headline_4" value="{{this.headline_4}}"/>
+        <input type="text" class="answer analysis-headline {{this.headline_5_class}}" id="headline_5" value="{{this.headline_5}}"/> 
+      </div>
+      
+      <div class='col-md-3'> 
+         <b>Did you have this?</b> <br>      
+        
+        
+        <div class="radio-container">
+        <input type="radio" name="rating_{{voice_id}}_1" data-id= "{{this.voice_id}}" value="yes" checked="{{this.yes_checked_1}}">
+        <span id ='yes' class='radio_answer_text'>Yes</span>
+        
+        <input type="radio" name="rating_{{voice_id}}_1" data-id= "{{this.voice_id}}" value="no" checked="{{this.no_checked_1}}">
+        <span id ='no' class='radio_answer_text'>No</span>
+        
+        <input type="radio" name="rating_{{voice_id}}_1" data-id= "{{this.voice_id}}" value="kinda" checked="{{this.kinda_checked_1}}">
+        <span id ='kinda' class='radio_answer_text'>Kinda</span>
+        
+        </div>
+        
+        <div class="radio-container">
+          <input type="radio" name="rating_{{voice_id}}_2" data-id= "{{this.voice_id}}" value="yes" checked="{{this.yes_checked_2}}">
+          <span id ='yes' class='radio_answer_text'>Yes</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_2" data-id= "{{this.voice_id}}" value="no" checked="{{this.no_checked_2}}">
+          <span id ='no' class='radio_answer_text'>No</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_2" data-id= "{{this.voice_id}}" value="kinda" checked="{{this.kinda_checked_2}}"><span id ='kinda' class='radio_answer_text'>Kinda</span>
+        </div>
+        
+        <div class="radio-container">
+          <input type="radio" name="rating_{{voice_id}}_3" data-id= "{{this.voice_id}}" value="yes" checked="{{this.yes_checked_3}}">
+          <span id ='yes' class='radio_answer_text'>Yes</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_3" data-id= "{{this.voice_id}}" value="no" checked="{{this.no_checked_3}}">
+          <span id ='no' class='radio_answer_text'>No</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_3" data-id= "{{this.voice_id}}" value="kinda" checked="{{this.kinda_checked_3}}"><span id ='kinda' class='radio_answer_text'>Kinda</span>
+        </div>
+        
+        <div class="radio-container">
+          <input type="radio" name="rating_{{voice_id}}_4" data-id= "{{this.voice_id}}" value="yes" checked="{{this.yes_checked_4}}">
+          <span id ='yes' class='radio_answer_text'>Yes</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_4" data-id= "{{this.voice_id}}" value="no" checked="{{this.no_checked_4}}">
+          <span id ='no' class='radio_answer_text'>No</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_4" data-id= "{{this.voice_id}}" value="kinda" checked="{{this.kinda_checked_4}}"><span id ='kinda' class='radio_answer_text'>Kinda</span>
+        </div>
+        
+        
+        <div class="radio-container">
+          <input type="radio" name="rating_{{voice_id}}_5" data-id= "{{this.voice_id}}" value="yes" checked="{{this.yes_checked_5}}">
+          <span id ='yes' class='radio_answer_text'>Yes</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_5" data-id= "{{this.voice_id}}" value="no" checked="{{this.no_checked_5}}">
+          <span id ='no' class='radio_answer_text'>No</span>
+          
+          <input type="radio" name="rating_{{voice_id}}_5" data-id= "{{this.voice_id}}" value="kinda" checked="{{this.kinda_checked_5}}"><span id ='kinda' class='radio_answer_text'>Kinda</span>
+        </div>
+                   
+
+      </div>
+      
+    </div>
+    
+    {{/each}}
+        
+        
+     <div class='row'>
+      <div class='col-md-5'> </div>
+      <div class='col-md-5'> 
+          <div id="submitButton" >
+          <br>
+          <a href="/" id='home' class="btn btn-primary">Home</a>
+        </div>
+      </div>  
+      <div class='col-md-2'> </div>  
+    </div>    
+  </div>
+  </div>
+  
+  
+  
+</template>

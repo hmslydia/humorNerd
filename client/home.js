@@ -54,7 +54,11 @@ Template.home.events({
   ANALYSIS 
 */  
   
-  'click #analysisBatch ': function(event){
+  'click #analysisInstructions' : function(){
+    
+  },
+  
+  'click #analysisBatch': function(event){
       var analysisBatchId = this._id
       goToAnalysisTaskBatch(analysisBatchId)
   },

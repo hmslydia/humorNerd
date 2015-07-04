@@ -1,0 +1,101 @@
+
+
+<template name="analysisInstructions">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <div class='title' align="center">Analyze Jokes</div>      
+        <b>Instructions </b>: Read the headline and the joke. <br>
+        Find all the "meaningful chunks" in the joke that correspond to things in the headline. <br>
+        "Meaningful chunks" is purposely ill-defined. The example below helps illustrate. They are usually:
+        <ul>
+          <li>people, places and things</li>
+          <li>short phrases</li>
+          <li>actions or activities</li>
+        </ul>
+        Copy and paste chunks in the joke. Next to it, copy and paste the corresponding chunk in the headline. <br>
+        Sometimes the match will be exact, sometimes it will be more referential. If the reference is non-obvious, say how it is related.<br>
+        <br>
+        The interface in the example is the same as the interface you will see.<br>
+        Our answers are highlighted in yellow.
+       <br>
+       <br>
+       <div class='title' align="center">Example</div> 
+      </div>
+      <div class='col-md-2'></div>
+    </div>
+    
+    <div class='row'>
+      <div class='col-md-4'></div>    
+      <div class='col-md-8'>  
+        
+        
+        <div class="headline-box">
+          <div class="headline">{{{headline}}}</div>
+          <div class="description">{{{description}}}</div> 
+        </div> 
+      </div> 
+      <div class='col-md-0'></div>
+    </div> 
+    
+
+    {{#each voices}}
+    <br>
+     <div class='row'>
+      <div class='col-md-2'> 
+        <img src="../../{{this.voice_image}}"/> 
+      </div>
+      <div class='col-md-2'>        
+        <div class="voiceText" >{{{this.voice_text}}}</div>
+      </div>
+      <div class='col-md-2'> 
+        <b>Joke </b> chunk  <br>  
+        <input type="text" class="answer analysis-joke {{this.joke_1_class}}" id="joke_1" value="{{this.joke_1}}" /><br>
+        <input type="text" class="answer analysis-joke {{this.joke_2_class}}" id="joke_2" value="{{this.joke_2}}"/><br>
+        <input type="text" class="answer analysis-joke {{this.joke_3_class}}" id="joke_3" value="{{this.joke_3}}"/><br>
+        <input type="text" class="answer analysis-joke {{this.joke_4_class}}" id="joke_4" value="{{this.joke_4}}"/><br>
+        <input type="text" class="answer analysis-joke {{this.joke_5_class}}" id="joke_5" value="{{this.joke_5}}"/><br> 
+        
+
+      </div>
+            
+      <div class='col-md-2'> 
+         <b>Headline</b> chunk<br>        
+        <input type="text" class="answer analysis-headline {{this.headline_1_class}}" id="headline_1" value="{{this.headline_1}}"/>
+        <input type="text" class="answer analysis-headline {{this.headline_2_class}}" id="headline_2" value="{{this.headline_2}}"/>
+        <input type="text" class="answer analysis-headline {{this.headline_3_class}}" id="headline_3" value="{{this.headline_3}}"/>
+        <input type="text" class="answer analysis-headline {{this.headline_4_class}}" id="headline_4" value="{{this.headline_4}}"/>
+        <input type="text" class="answer analysis-headline {{this.headline_5_class}}" id="headline_5" value="{{this.headline_5}}"/> 
+      </div>
+      <div class='col-md-3'> 
+         <b>Relationship</b> (if non-obvious)<br>      
+        <input type="text" class="answer analysis-relationship {{this.relationship_1_class}}" id="relationship_1" value="{{this.relationship_1}}"/><br>
+        <input type="text" class="answer analysis-relationship {{this.relationship_2_class}}" id="relationship_2" value="{{this.relationship_2}}"/><br>
+        <input type="text" class="answer analysis-relationship {{this.relationship_3_class}}" id="relationship_3" value="{{this.relationship_3}}"/><br>
+        <input type="text" class="answer analysis-relationship {{this.relationship_4_class}}" id="relationship_4" value="{{this.relationship_4}}"/><br>
+        <input type="text" class="answer analysis-relationship {{this.relationship_5_class}}" id="relationship_5" value="{{this.relationship_5}}"/><br>
+      </div>
+      
+    </div>
+    
+    {{/each}}
+
+    
+    <div class='row'>
+      <div class='col-md-5'> </div>
+      <div class='col-md-5'> 
+          <div id="submitButton" >
+          <br>
+          <a href="/" id='home' class="btn btn-primary">Home</a>
+        </div>
+      </div>  
+      <div class='col-md-2'> </div>  
+    </div>  
+        
+        
+  </div>
+  
+  
+  
+</template>
